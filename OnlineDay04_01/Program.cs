@@ -6,7 +6,19 @@ namespace OnlineDay04_01
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            GameManager manager = new GameManager();
+            manager.Init();
+            manager.Render();
+
+
+            /*
+            while(manager.gameState)
+            {
+                manager.Update();
+            }
+            */
+
+            Console.ReadLine();
         }
     }
 }
