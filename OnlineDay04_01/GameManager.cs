@@ -9,26 +9,19 @@ namespace OnlineDay04_01
         public bool gameState = true;
 
         Maze maze;
-        ConsoleKeyInfo cKey;
 
         public void Init()
         {
             maze = new Maze();
+            maze.mapPrinting();
         }
 
         public void Update()
         {
-            if (Console.KeyAvailable)
-            {
-                cKey = Console.ReadKey();
-
-                switch (cKey.Key)
-                {
-                    case ConsoleKey.S:
-                        gameState = false;
-                        break;
-                }
-            }
+            if (!maze.gameStart)
+                gameState = false;
+            else
+                maze.Update();
         }
 
         public void Render()

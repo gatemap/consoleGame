@@ -8,15 +8,13 @@ namespace OnlineDay04_01
         {
             GameManager manager = new GameManager();
             manager.Init();
-            manager.Render();
-
-
-            /*
+            
             while(manager.gameState)
             {
                 manager.Update();
+                manager.Render();
             }
-            */
+
 
             Console.ReadLine();
         }
